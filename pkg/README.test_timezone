@@ -1,0 +1,34 @@
+Y! New Auctions Platform 
+
+This is the handler for pvs
+
+http://devel.yahoo.com/yahoo/doc/php/intl_layout.html
+
+-------------------------------------
+Directory layout:
+
+src - contains php ext code "C/C++ libraries" (see intl_layout.html)
+pear - contains "Generic PHP functions and classes" (see intl_layout.html)
+test - contains phpt scripts
+sample - contains some examples  
+doc - documentation indexed http://devel.yahoo.com...
+pkg - yicf files for building yinst package
+
+--------------------------------------
+Version: 0.0.6
+- make rhel4
+
+Version: 0.0.5
+- bugfix
+
+Version: 0.0.4
+- add dependency
+
+Version: 0.0.3
+- optimize
+
+Version: 0.0.2
+- add getPageViewCount() and deletePageViewCount()
+
+Version: 0.0.1
+- initial

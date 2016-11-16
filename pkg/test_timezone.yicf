@@ -1,0 +1,36 @@
+PRODUCT_NAME = test_timezone
+RELEASE_LINE = 0.0
+VERSION      = `/home/y/bin/auto_increment_version.pl $(PRODUCT_NAME) $(RELEASE_LINE)`
+SHORT_DESC   = `head -n 1 README.$(PRODUCT_NAME)`
+LONG_DESC    = `cat README.$(PRODUCT_NAME)`
+CUSTODIAN    =  tw-auctions-dev@yahoo-inc.com http://twiki.corp.yahoo.com/view/ECommerce/BuyerTrackEng
+PERM         = 0444
+OWNER        = root
+GROUP        = wheel
+SRCDIRS      = .
+
+PLATFORMS = `build_platforms -r6_64`
+
+YAPACHES = 2.4
+YPHPS = 5.6
+
+PACKAGE_OS_SPECIFIC = yes
+PACKAGE_OS_VERSIONED = yes
+
+YINST bug-product TW Auctions
+YINST bug-component General
+
+CVSZIP_UPDATE_ERROR = 1
+NO_AUTO_REQUIRES = 1
+
+EXT_NAME = test_timezone
+BIN_DIR = ../src/timezone_extension
+
+
+YINST started-by yphp
+
+YINST requires pkg yapr *
+YINST requires pkg yap_errlist *
+YINST requires pkg yphp_yap_phparraydata *
+
+configfile 644 - - etc/php/test_timezone.ini 	 test_timezone.ini overwrite
